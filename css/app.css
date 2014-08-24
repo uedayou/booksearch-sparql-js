@@ -1,0 +1,35 @@
+/*
+@font-face {
+  font-family: gutenberg;
+  src: url(../font/Gutenberg.ttf);
+}
+*/
+
+.jumbotron h1 {font-family: gutenberg;}
+.jumbotron a {color: #475F77;}
+.jumbotron a:hover {text-decoration: none;}
+.jumbotron a:visited {text-decoration: none}
+
+body {
+  background-color: #DCDDD8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+    width: 900px;
+ }
+.jumbotron{
+	margin-bottom: 20px;
+	background-color: #DCDDD8;
+}
+.next a{
+	width: 103px;
+}
+
+div#rating {
+	display: inline-block;
+}
+
+div#hint {
+	display: inline-block;
+}
