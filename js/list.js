@@ -62,5 +62,5 @@ $(document).ready(function () {
         }
         getBooksList(q, page);
     });
-    getBooksList(q, page);
+    if(q.length>0) {getBooksList(q, page)};
 });
