@@ -2,7 +2,8 @@ function getBooksList(q, page) {
     var startIndex= page ? page * nlimit : 0 ;
     $('#q').val(q);
     $('#content a').remove();           
-    var query = list_query.replace("{% QUERY %}", q)+" LIMIT "+nlimit+" offset "+startIndex;
+    //var query = list_query.replace("{% QUERY %}", q)+" LIMIT "+nlimit+" offset "+startIndex;
+    var query = list_query.split("{% QUERY %}").join(q)+" LIMIT "+nlimit+" offset "+startIndex;
     qr = sendQuery(endpoint, query);
     qr.fail(
         function (xhr, textStatus, thrownError) {
