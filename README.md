@@ -27,6 +27,12 @@ SPARQLクエリは、?uriに書籍URI、?titleに書籍タイトル、?descripti
 
 SPARQLエンドポイントは、CORS(Cross-Origin Resource Sharing)に対応したもののみ利用できます。
 
+## 動作環境
+
+- Windows 7 + Internet Explorer 11
+- Windows 7 + Google Chrome 36.0
+- Windows 7 + Mozilla Firefox 30.0
+
 ## 利用ライブラリ
 
 - [BookSearchApplication](https://github.com/theofilis/BookSearchApplication)

@@ -1,4 +1,4 @@
-function getBook(id) {
+﻿function getBook(id) {
     var query = book_query.replace("{% URI %}", id);
     qr = sendQuery(endpoint, query);
     qr.fail(
@@ -21,9 +21,13 @@ function getBook(id) {
                     var thumbnail = item.o.value;
                 }
                 var prop = (item.p.value in prop_labels)?prop_labels[item.p.value]:item.p.value;
+                var obj = item.o.value;
+                if (typeof obj === 'string' && obj.indexOf('http') === 0) {
+                    obj = '<a target="_blank" href="' + obj + '">'+ obj + '</a>';
+                }
                 content += '<div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">'
                 + prop +'</h3></div><div class="panel-body">'
-                + item.o.value +'</div></div>';
+                + obj +'</div></div>';
             }
 
             $('.thumbnail').append('<img src="' + thumbnail + '" alt="...">');

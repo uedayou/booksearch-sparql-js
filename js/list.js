@@ -1,4 +1,4 @@
-function getBooksList(q, page) {
+﻿function getBooksList(q, page) {
     var startIndex= page ? page * nlimit : 0 ;
     $('#q').val(q);
     $('#content a').remove();           
